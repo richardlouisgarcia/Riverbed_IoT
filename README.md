@@ -1,5 +1,5 @@
-/*
-  # Riverbed_IoT
+
+  Riverbed_IoT
   Here are instructions on how to use the code:
 
   First time using Python? Setup your environment
