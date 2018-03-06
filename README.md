@@ -56,4 +56,7 @@ You can now download the code and start building:
       ID = sensor identification number
       SensorData = raw sensor data
 
+Validate your data uploaded:
+
+    http://52.191.135.88:8080/sensor/<ID>
 
