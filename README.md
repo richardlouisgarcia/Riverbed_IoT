@@ -1,27 +1,58 @@
-# Riverbed_IoT
-Here are instructions on how to use the code:
+/*
+  # Riverbed_IoT
+  Here are instructions on how to use the code:
 
+  First time using Python? Setup your environment
+      #Validate you have Python
+      python --version
 
-# Make a directory
-mkdir ~/projects
+      #Validate you have pip
+      pip --version
 
-#Cd to directory
-cd ~/projects
+      #Install virtualenv for create isolated Python environment and dependency manager
+      pip install virtualenv
+      
+      #Test intsall
+      virtualenv --version
+      
+      # Make a directory
+      mkdir Development
 
-#get code
-git clone https://github.com/Jeffhdavidson/Riverbed_IoT.git
+      #Cd to directory
+      cd Development
+      
+      #Create your virtual environment
+      virtualenv my_project
+      
+      #Start the virtual environment
+      source my_project/bin/activate
+      
+              #When you wish to exit the virtual environment
+              deactivate
 
-#cd to project
-cd 
+              #To return to virtual environment
+              workon my_project
 
-#install required dependencis
-pip install -r requirements.txt
+  #get code
+  git clone https://github.com/Jeffhdavidson/Riverbed_IoT.git
 
-#to test run the following
-python test.py
+  #cd to project folder
+  cd Riverbed_IoT
 
-#to use the function add following to your code
-from function import upload
+  #install required dependencis
+  pip install -r requirements.txt
 
-#Here is the format to use function
-returncode = upload(ID,SensorData)
+  #to test run the following. A return code of 200 means it works!
+  python test.py
+
+  #to use the function add following to your code
+  from function import upload
+
+  #Here is the function description and usage
+  returncode = upload(ID,SensorData)
+
+  #returncode = HTTP return code; 200=OK 500=server error
+  #ID = sensor identification number
+  #SensorData = raw sensor data
+
+*/
