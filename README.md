@@ -45,7 +45,7 @@ You can now download the code and start building:
       #to test run the following. A return code of 200 means it works!
       python test.py
 
-      #to use the function add following to your code
+      #to use the function add following to your code (look at test.py as example)
       from function import upload
 
       #Here is the function description and usage
