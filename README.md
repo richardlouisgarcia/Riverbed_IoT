@@ -1,5 +1,5 @@
 
-  #Riverbed_IoT
+  Riverbed_IoT
   Here are instructions on how to use the code:
 
   First time using Python? Setup your environment
@@ -33,26 +33,27 @@
               #To return to virtual environment
               workon my_project
 
-  #get code
-  git clone https://github.com/Jeffhdavidson/Riverbed_IoT.git
+You can now download the code and start building:
+      #get code
+      git clone https://github.com/Jeffhdavidson/Riverbed_IoT.git
 
-  #cd to project folder
-  cd Riverbed_IoT
+      #cd to project folder
+      cd Riverbed_IoT
 
-  #install required dependencis
-  pip install -r requirements.txt
+      #install required dependencis
+      pip install -r requirements.txt
 
-  #to test run the following. A return code of 200 means it works!
-  python test.py
+      #to test run the following. A return code of 200 means it works!
+      python test.py
 
-  #to use the function add following to your code
-  from function import upload
+      #to use the function add following to your code
+      from function import upload
 
-  #Here is the function description and usage
-  returncode = upload(ID,SensorData)
+      #Here is the function description and usage
+      returncode = upload(ID,SensorData)
 
-  #returncode = HTTP return code; 200=OK 500=server error
-  #ID = sensor identification number
+      #returncode = HTTP return code; 200=OK 500=server error
+      #ID = sensor identification number
   #SensorData = raw sensor data
 
 */
