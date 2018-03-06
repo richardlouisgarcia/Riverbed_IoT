@@ -1,30 +1,31 @@
 
   Riverbed_IoT
+  
   Here are instructions on how to use the code:
 
   First time using Python? Setup your environment
-      Validate you have Python
+      #Validate you have Python
       python --version
 
-      Validate you have pip
+      #Validate you have pip
       pip --version
 
-      Install virtualenv for create isolated Python environment and dependency manager
+      #Install virtualenv for create isolated Python environment and dependency manager
       pip install virtualenv
       
-      Test intsall
+      #Test intsall
       virtualenv --version
       
-      Make a directory
+      #Make a directory
       mkdir Development
 
-      Cd to directory
+      #Cd to directory
       cd Development
       
-      Create your virtual environment
+      #Create your virtual environment
       virtualenv my_project
       
-      Start the virtual environment
+      #Start the virtual environment
       source my_project/bin/activate
       
               #When you wish to exit the virtual environment
@@ -34,6 +35,7 @@
               workon my_project
 
 You can now download the code and start building:
+
       #get code
       git clone https://github.com/Jeffhdavidson/Riverbed_IoT.git
 
@@ -54,6 +56,6 @@ You can now download the code and start building:
 
       #returncode = HTTP return code; 200=OK 500=server error
       #ID = sensor identification number
-  #SensorData = raw sensor data
+      #SensorData = raw sensor data
 
-*/
+
