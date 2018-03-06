@@ -1,6 +1,3 @@
-
-  Riverbed_IoT
-  
   Here are instructions on how to use the code:
 
   First time using Python? Setup your environment
@@ -54,8 +51,9 @@ You can now download the code and start building:
       #Here is the function description and usage
       returncode = upload(ID,SensorData)
 
-      #returncode = HTTP return code; 200=OK 500=server error
-      #ID = sensor identification number
-      #SensorData = raw sensor data
+      #Variable descriptions
+      returncode = HTTP return code; 200=OK 500=server error etc.
+      ID = sensor identification number
+      SensorData = raw sensor data
 
 
