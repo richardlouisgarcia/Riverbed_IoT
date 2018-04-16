@@ -40,7 +40,7 @@ You can now download the code and start building:
       #get code
       git clone https://github.com/Jeffhdavidson/Riverbed_IoT.git
 
-      #cd to project folder
+      #Switch to project folder
       cd Riverbed_IoT
 
       #install required dependencis
