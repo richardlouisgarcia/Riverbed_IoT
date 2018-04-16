@@ -3,7 +3,7 @@ import json
 import datetime
 #import geocoder #alternative GPS
 
-def upload(ID,SensorData):
+def upload(ID,Moisture,degreeC,humidity):
 	#Get current UTC time and convert to iso format for JSON
 	TimeStamp = datetime.datetime.utcnow().isoformat()
 	
@@ -21,22 +21,22 @@ def upload(ID,SensorData):
 	#GPS = '47.7157, -122.301'
 
 	#Static API Key
-	APIkey ='12344'
+	APIkey ='007'
 
 	#Server Location
-	url ='http://52.191.135.88:8080/sensor'
+	#url ='http://52.191.135.88:8080/sensor'
+	url ='http://40.70.0.179:8080/sensor'
 
 
 	#Send Payload to Server
-	r = requests.post(url, json={"id":ID,"timeStamp":TimeStamp,"sensorData":SensorData,"gps":GPS,"apiKey":"12344"})
+	#r = requests.post(url, json={"id":ID,"timeStamp":TimeStamp,"sensorData":SensorData,"gps":GPS,"apiKey":"12344"})
+	r = requests.post(url, json={"id":ID,"gps":GPS,"apikey":APIkey,"timestamp":TimeStamp,"sensordata": {"moisture":Moisture,
+	"temp":degreeC,"humidity":humidity}})
 
 	#Get status code and return to caller
 	statuscode = r.status_code
 	return statuscode
 
-
-
 #Error code
 #returns none or error
 #bad_r.raise_for_status() 
-
