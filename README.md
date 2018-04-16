@@ -3,15 +3,18 @@
   First time using Python? Setup your environment
       #Validate you have Python
       python --version
+      <Python 3.6.4 or Python 3.x.x>
 
       #Validate you have pip
       pip --version
+      <pip 9.0.1 from /usr/local/lib/python3.6/site-packages (python 3.6)>
 
       #Install virtualenv for create isolated Python environment and dependency manager
       pip install virtualenv
       
       #Test intsall
       virtualenv --version
+      <15.1.0>
       
       #Make a directory
       mkdir Development
