@@ -20,7 +20,7 @@
       #Make a directory
       mkdir Development
 
-      #Cd to directory
+      #Switch to directory
       cd Development
       
       #Create your virtual environment
