@@ -1,7 +1,8 @@
   Here are instructions on how to use the code:
 
   First time using Python? Setup your environment
-      #Validate you have Python
+     
+     #Validate you have Python
       python --version
       <Python 3.6.4 or Python 3.x.x>
 
