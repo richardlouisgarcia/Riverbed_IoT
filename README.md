@@ -51,16 +51,17 @@ You can now download the code and start building:
 
       #to use the function add following to your code (look at test.py as example)
       from function import upload
+      returncode = upload(username,UUID,Moisture,temp,humidity)
 
-      #Here is the function description and usage
-      returncode = upload(username,UUID,Moisture,degreeC,humidity)
+      #Here is the function usage example
+      returncode = upload(Jdavidson, 690592e3-e919-4ec5-a948-bc7d29709f27, 33, 14, 22)
 
       #Variable descriptions
       returncode = HTTP return code; 200=OK 500=server error etc.
       username = your username
       UUID = sensor unique identification number
       Moisture = moisture level
-      degreeC = temperature in Celsius
+      temp = temperature in Celsius
       humidity = percent humidity
       
 Validate your data uploaded:
