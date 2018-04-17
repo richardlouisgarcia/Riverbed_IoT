@@ -1,22 +1,21 @@
 from function import upload
 import uuid
 
-#print('Please Enter Sensor ID')
-#ID= input()
+print('Please Enter username')
+user = input()
 
 # make a random UUID
 ID = uuid.uuid4()
-print(ID)
 
 print('Please Enter Moisture')
 Moisture = input()
 
 print('Please Enter Temperature')
-degreeC = input()
+temp = input()
 
 print('Please Enter Humidity')
 humidity = input()
 
-returncode = upload(ID,Moisture,degreeC,humidity)
+returncode = upload(user,ID,Moisture,temp,humidity)
 
 print(returncode)
