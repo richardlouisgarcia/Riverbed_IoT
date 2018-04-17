@@ -1,11 +1,20 @@
 import requests
 import json
-import datetime
+from datetime import datetime
+import time
 #import geocoder #alternative GPS
 
-def upload(ID,Moisture,degreeC,humidity):
-	#Get current UTC time and convert to iso format for JSON
-	TimeStamp = datetime.datetime.utcnow().isoformat()
+def upload(user,UUID,Moisture,temp,humidity):
+	
+	#Convert UUID to string for JSON
+	ID = str(UUID)
+	
+	#Get current date & time
+	date = datetime.now().strftime("%x")
+	timestamp = datetime.now().strftime("%X")
+	
+	#Get seconds since epoch convert to JSON
+	epoch = json.dumps(time.time())
 	
 	#Get Location in GPS format to JSON
 	geo_r = requests.get("http://freegeoip.net/json")
@@ -27,11 +36,9 @@ def upload(ID,Moisture,degreeC,humidity):
 	#url ='http://52.191.135.88:8080/sensor'
 	url ='http://40.70.0.179:8080/sensor'
 
-
 	#Send Payload to Server
-	#r = requests.post(url, json={"id":ID,"timeStamp":TimeStamp,"sensorData":SensorData,"gps":GPS,"apiKey":"12344"})
-	r = requests.post(url, json={"id":ID,"gps":GPS,"apikey":APIkey,"timestamp":TimeStamp,"sensordata": {"moisture":Moisture,
-	"temp":degreeC,"humidity":humidity}})
+	#r = requests.post(url, json={"id":ID,"gps":GPS,"apikey":APIkey,"timestamp":TimeStamp,"sensordata": {"moisture":Moisture,"temp":temp,"humidity":humidity}})
+	r = requests.post(url, json={"date":date,"epoch":epoch,"user":user,"timestamp":timestamp,"moisture":Moisture,"temp":temp,"humidity":humidity,"gps":GPS,"apikey":APIkey,"serial":ID})
 
 	#Get status code and return to caller
 	statuscode = r.status_code
@@ -40,3 +47,4 @@ def upload(ID,Moisture,degreeC,humidity):
 #Error code
 #returns none or error
 #bad_r.raise_for_status() 
+
