@@ -53,16 +53,16 @@ You can now download the code and start building:
       from function import upload
 
       #Here is the function description and usage
-      returncode = upload(ID,Moisture,degreeC,humidity)
+      returncode = upload(username,UUID,Moisture,degreeC,humidity)
 
       #Variable descriptions
       returncode = HTTP return code; 200=OK 500=server error etc.
-      ID = sensor unique identification number
+      username = your username
+      UUID = sensor unique identification number
       Moisture = moisture level
       degreeC = temperature in Celsius
       humidity = percent humidity
       
 Validate your data uploaded:
 
-    http://40.70.0.179:8080/sensor/<ID>
-
+    http://40.70.0.179:8080/sensor/
