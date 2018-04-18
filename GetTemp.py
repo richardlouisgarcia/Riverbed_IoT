@@ -7,7 +7,7 @@ print('Please Enter GPIO')
 pin = input()
 
 print('Please Enter username')
-user = input()
+user = raw_input()
 
 # make a random UUID
 ID = uuid.uuid4()
