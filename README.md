@@ -44,7 +44,7 @@ You can now download the code and start building:
       cd Riverbed_IoT
 
       #install required dependencis
-      pip install -r requirements.txt
+      sudo pip install -r requirements.txt
 
       #to test run the following. A return code of 200 means it works!
       python test.py
