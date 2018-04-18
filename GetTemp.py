@@ -14,7 +14,7 @@ ID = uuid.uuid4()
 
 # Sensor should be set to Adafruit_DHT.DHT11,
 # Adafruit_DHT.DHT22, or Adafruit_DHT.AM2302.
-sensor = AAdafruit_DHT.AM2302
+sensor = Adafruit_DHT.AM2302
 
 # Try to grab a sensor reading.  Use the read_retry method which will retry up
 # to 15 times to get a sensor reading (waiting 2 seconds between each retry).
