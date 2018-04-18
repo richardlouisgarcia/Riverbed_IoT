@@ -25,8 +25,6 @@
       
       #Create your virtual environment
       virtualenv my_project
-      #If you wish to specify the Python version use below syntax
-      virtualenv --python=/usr/bin/python3.4 <path/to/new/virtualenv/>
       
       #Start the virtual environment
       source my_project/bin/activate
