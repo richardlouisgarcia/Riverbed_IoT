@@ -14,7 +14,9 @@ def upload(user,UUID,Moisture,temp,humidity):
 	timestamp = datetime.now().strftime("%X")
 	
 	#Get seconds since epoch convert to JSON
-	epoch = json.dumps(time.time())
+	#epoch = json.dumps(time.time())
+	#Get miliseconds since epoch convert to JSON
+	epoch = int(round(time.time() * 1000))
 	
 	#Get Location in GPS format to JSON
 	geo_r = requests.get("http://freegeoip.net/json")
