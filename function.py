@@ -45,8 +45,3 @@ def upload(user,UUID,Moisture,temp,humidity):
 	#Get status code and return to caller
 	statuscode = r.status_code
 	return statuscode
-
-#Error code
-#returns none or error
-#bad_r.raise_for_status() 
-
