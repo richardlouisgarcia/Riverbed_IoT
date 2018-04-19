@@ -1,3 +1,7 @@
+#This is a fully functioning test
+#This takes in input from user and sensor data
+#A successful test will return the temperature and code 200
+
 import sys
 import Adafruit_DHT
 from function import upload
