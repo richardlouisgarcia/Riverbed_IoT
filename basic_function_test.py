@@ -1,3 +1,6 @@
+#This code asks for user input then tests the upload function
+#A successful test will return 200 
+
 from function import upload
 import uuid
 
