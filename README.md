@@ -47,7 +47,7 @@ You can now download the code and start building:
       sudo pip install -r requirements.txt
 
       #to test run the following. A return code of 200 means it works!
-      python test.py
+      python basic_function_test.py
 
       #to use the function add following to your code (look at test.py as example)
       from function import upload
