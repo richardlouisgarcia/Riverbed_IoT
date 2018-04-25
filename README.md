@@ -4,7 +4,7 @@
      
      #Validate you have Python
       python --version
-      <Python 3.6.4 or Python 3.x.x>
+      <Python 2.7 or Python 2.x.x>
 
       #Validate you have pip
       pip --version
