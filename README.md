@@ -8,7 +8,7 @@
 
       #Validate you have pip
       pip --version
-      <pip 9.0.1 from /usr/local/lib/python3.6/site-packages (python 2.7)>
+      <pip 9.0.1 from /usr/local/lib/python3.6/site-packages (python 2.X)>
 
       #Install virtualenv for create isolated Python environment and dependency manager
       pip install virtualenv
