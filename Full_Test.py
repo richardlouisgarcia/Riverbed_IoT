@@ -6,9 +6,13 @@ import sys
 import Adafruit_DHT
 from function import upload
 import uuid
+import RPi.GPIO as GPIO
 
-print('Please Enter GPIO')
-pin = input()
+print('Please Enter GPIO for TempSensor')
+pin_temp = input()
+
+print('Please Enter GPIO for MoistureSensor')
+pin_moist = input()
 
 print('Please Enter username')
 user = raw_input()
@@ -22,13 +26,17 @@ sensor = Adafruit_DHT.AM2302
 
 # Try to grab a sensor reading.  Use the read_retry method which will retry up
 # to 15 times to get a sensor reading (waiting 2 seconds between each retry).
-humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
+humidity, temperature = Adafruit_DHT.read_retry(sensor, pin_temp)
 
 # Un-comment the line below to convert the temperature to Fahrenheit.
-# temperature = temperature * 9/5.0 + 32
+temperature = temperature * 9/5.0 + 32
 
-#Static Moisture
-Moisture = 0
+#Configure GPIO Moisture Pins
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(pin_moist, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+
+#Get Moisture
+Moisture = GPIO.input(pin_moist)
 
 #Send to webserver
 returncode = upload(user,ID,Moisture,temperature,humidity)
